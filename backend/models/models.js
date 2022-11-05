@@ -11,12 +11,16 @@ const User = sequelize.define('user', {
     },
     email: {
         type: DataTypes.STRING,
-        unqiue: true
+        unique: true,
     },
     password: {
         type: DataTypes.STRING
     },
-});
+    role: {
+        type: DataTypes.STRING,
+        defaultValue: "USER"
+    },
+})
 
 const Basket = sequelize.define('basket', {
     id: {
